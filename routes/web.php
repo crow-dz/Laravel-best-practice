@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\SessionsController;
+
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
@@ -28,4 +30,12 @@ Route::controller(PostController::class)->group(function ($route) {
 // Auth Routes
 Route::controller(RegisterUserController::class)->group(function ($route) {
     $route->get('/register', 'create')->name('auth.register');
+    $route->post('/register', 'store')->name('auth.register');
+
+});
+// Auth Routes
+Route::controller(SessionsController::class)->group(function ($route) {
+    $route->get('/login', 'create')->name('auth.login');
+    $route->post('/login', 'store')->name('auth.login');
+
 });
