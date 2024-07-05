@@ -42,8 +42,8 @@
                 <x-form-fields>
                     <x-form-label>Confirm Password</x-form-label>
                     <div class="mt-1">
-                        <x-form-input id="confirmation_password" name="confirmation_password" type="password" autocomplete="confirmation_password"
-                            value="" placeholder="Password"></x-form-input>
+                        <x-form-input id="password_confirmation" name="password_confirmation" type="password" autocomplete="password_confirmation"
+                            value="" placeholder="Re-Password"></x-form-input>
                     </div>
                     <x-form-errors name="password"></x-form-errors>
                 </x-form-fields>

@@ -36,6 +36,8 @@ Route::controller(RegisterUserController::class)->group(function ($route) {
 // Auth Routes
 Route::controller(SessionsController::class)->group(function ($route) {
     $route->get('/login', 'create')->name('auth.login');
-    $route->post('/login', 'store')->name('auth.login');
+    $route->post('/login', 'store');
+    $route->post('/logout', 'destroy');
+
 
 });
