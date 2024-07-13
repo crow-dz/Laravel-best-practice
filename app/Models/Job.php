@@ -22,4 +22,5 @@ class Job extends Model
   {
       return $this->belongsToMany(Tag::class, 'job_tag', 'jobs_listing_id', 'tag_id');
   }
+  
 }
